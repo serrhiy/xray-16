@@ -13,3 +13,6 @@ u64 generate_time(
 
 void split_time(u64 time,
     u32& years, u32& months, u32& days, u32& hours, u32& minutes, u32& seconds, u32& milliseconds);
+
+// Day of the week: 0 - Monday, ..., 6 - Sunday.
+u32 week_day(u64 time);

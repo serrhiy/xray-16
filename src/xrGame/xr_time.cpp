@@ -58,6 +58,8 @@ void xrTime::get(u32& y, u32& mo, u32& d, u32& h, u32& mi, u32& s, u32& ms) cons
     split_time(m_time, y, mo, d, h, mi, s, ms);
 }
 
+u32 xrTime::dayOfWeek() const { return week_day(m_time); }
+
 float xrTime::diffSec(const xrTime& other) const
 {
     if (*this > other)

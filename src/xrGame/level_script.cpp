@@ -949,6 +949,7 @@ void CLevel::script_register(lua_State* luaState)
             .def("set", &xrTime::set)
             .def("get", &xrTime::get, policy_list<out_value<2>, out_value<3>, out_value<4>,
                                           out_value<5>, out_value<6>, out_value<7>, out_value<8>>())
+            .def("dayOfWeek", &xrTime::dayOfWeek)
             .def("dateToString", &xrTime::dateToString)
             .def("timeToString", &xrTime::timeToString),
 

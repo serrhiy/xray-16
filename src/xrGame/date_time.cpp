@@ -198,3 +198,7 @@ void split_time(u64 time, u32& years, u32& months, u32& days, u32& hours, u32& m
     VERIFY(test_time == time);
 #endif // #ifdef DEBUG
 }
+
+// Game time counts milliseconds from 1 January of year 1 (see generate_time), and that
+// day of the proleptic Gregorian calendar was a Monday.
+u32 week_day(u64 time) { return u32(time / (u64(24) * 60 * 60 * 1000) % 7); }
