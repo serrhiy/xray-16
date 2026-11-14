@@ -221,8 +221,7 @@ void CUIActorMenu::Update()
     {
         if (m_clock_value)
         {
-            m_clock_value->SetText(InventoryUtilities::GetGameTimeAsString(
-                InventoryUtilities::etpTimeToMinutes).c_str());
+            m_clock_value->SetText(InventoryUtilities::GetGameClockAsString().c_str());
         }
 
         CurrentGameUI()->UIMainIngameWnd->UpdateZoneMap(smart_cast<CActor*>(m_pActorInvOwner));

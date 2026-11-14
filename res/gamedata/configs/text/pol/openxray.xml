@@ -123,4 +123,25 @@
 	<string id="ukr">
     	<text>Ukraiñski (Ukrainian)</text>
 	</string>
+	<string id="week_day_monday">
+		<text>Pn</text>
+	</string>
+	<string id="week_day_tuesday">
+		<text>Wt</text>
+	</string>
+	<string id="week_day_wednesday">
+		<text>Œr</text>
+	</string>
+	<string id="week_day_thursday">
+		<text>Cz</text>
+	</string>
+	<string id="week_day_friday">
+		<text>Pt</text>
+	</string>
+	<string id="week_day_saturday">
+		<text>So</text>
+	</string>
+	<string id="week_day_sunday">
+		<text>Nd</text>
+	</string>
 </string_table>

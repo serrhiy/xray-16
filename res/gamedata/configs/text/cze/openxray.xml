@@ -168,4 +168,25 @@
 	<string id="jpn">
 		<text>Japonština (Japan)</text>
 	</string>
+	<string id="week_day_monday">
+		<text>Po</text>
+	</string>
+	<string id="week_day_tuesday">
+		<text>Út</text>
+	</string>
+	<string id="week_day_wednesday">
+		<text>St</text>
+	</string>
+	<string id="week_day_thursday">
+		<text>Èt</text>
+	</string>
+	<string id="week_day_friday">
+		<text>Pá</text>
+	</string>
+	<string id="week_day_saturday">
+		<text>So</text>
+	</string>
+	<string id="week_day_sunday">
+		<text>Ne</text>
+	</string>
 </string_table>

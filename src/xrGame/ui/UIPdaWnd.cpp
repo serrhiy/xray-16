@@ -255,7 +255,7 @@ void CUIPdaWnd::Update()
 
     if (m_clock)
     {
-        auto time = GetGameTimeAsString(InventoryUtilities::etpTimeToMinutes);
+        auto time = InventoryUtilities::GetGameClockAsString();
         if (m_clock->GetParent() != this) // SOC
         {
             const auto date = GetGameDateAsString(InventoryUtilities::edpDateToDay, '/', true);

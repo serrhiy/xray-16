@@ -144,7 +144,7 @@ void CUIZoneMap::Update(const CActor* actor)
 
     if (m_clock_wnd)
     {
-        m_clock_wnd->SetText(GetGameTimeAsString(InventoryUtilities::etpTimeToMinutes).c_str());
+        m_clock_wnd->SetText(InventoryUtilities::GetGameClockAsString().c_str());
     }
 }
 

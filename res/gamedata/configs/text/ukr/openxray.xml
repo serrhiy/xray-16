@@ -174,4 +174,25 @@
 	<string id="jpn">
 		<text>японська (Japanese)</text>
 	</string>
+	<string id="week_day_monday">
+		<text>ѕн</text>
+	</string>
+	<string id="week_day_tuesday">
+		<text>¬т</text>
+	</string>
+	<string id="week_day_wednesday">
+		<text>—р</text>
+	</string>
+	<string id="week_day_thursday">
+		<text>„т</text>
+	</string>
+	<string id="week_day_friday">
+		<text>ѕт</text>
+	</string>
+	<string id="week_day_saturday">
+		<text>—б</text>
+	</string>
+	<string id="week_day_sunday">
+		<text>Ќд</text>
+	</string>
 </string_table>

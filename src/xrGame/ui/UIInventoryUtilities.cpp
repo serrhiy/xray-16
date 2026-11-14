@@ -30,6 +30,12 @@ const LPCSTR st_months[12] = // StringTable for GetDateAsString()
     {"month_january", "month_february", "month_march", "month_april", "month_may", "month_june", "month_july",
         "month_august", "month_september", "month_october", "month_november", "month_december"};
 
+const LPCSTR st_week_days[7] = // StringTable for GetWeekDayAsString(), short names
+    {"week_day_monday", "week_day_tuesday", "week_day_wednesday", "week_day_thursday", "week_day_friday",
+        "week_day_saturday", "week_day_sunday"};
+
+int g_show_week_day = 0; // console: g_show_week_day
+
 ui_shader* g_BuyMenuShader = NULL;
 ui_shader* g_EquipmentIconsShader = NULL;
 ui_shader* g_MPCharIconsShader = NULL;
@@ -225,6 +231,21 @@ shared_str InventoryUtilities::GetGameDateAsString(EDatePrecision datePrec, char
 shared_str InventoryUtilities::GetGameTimeAsString(ETimePrecision timePrec, char timeSeparator, bool full_mode)
 {
     return GetTimeAsString(Level().GetGameTime(), timePrec, timeSeparator, full_mode);
+}
+
+shared_str InventoryUtilities::GetWeekDayAsString(ALife::_TIME_ID time)
+{
+    return StringTable().translate(st_week_days[week_day(time)]);
+}
+
+shared_str InventoryUtilities::GetGameClockAsString()
+{
+    const shared_str time = GetGameTimeAsString(etpTimeToMinutes);
+    if (!g_show_week_day)
+        return time;
+    string64 buf;
+    xr_sprintf(buf, "%s %s", GetWeekDayAsString(Level().GetGameTime()).c_str(), time.c_str());
+    return buf;
 }
 
 shared_str InventoryUtilities::GetTimeAndDateAsString(ALife::_TIME_ID time)

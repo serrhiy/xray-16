@@ -126,4 +126,25 @@
 	<string id="ukr">
 		<text>Ukrainian</text>
 	</string>
+	<string id="week_day_monday">
+		<text>Mon</text>
+	</string>
+	<string id="week_day_tuesday">
+		<text>Tue</text>
+	</string>
+	<string id="week_day_wednesday">
+		<text>Wed</text>
+	</string>
+	<string id="week_day_thursday">
+		<text>Thu</text>
+	</string>
+	<string id="week_day_friday">
+		<text>Fri</text>
+	</string>
+	<string id="week_day_saturday">
+		<text>Sat</text>
+	</string>
+	<string id="week_day_sunday">
+		<text>Sun</text>
+	</string>
 </string_table>

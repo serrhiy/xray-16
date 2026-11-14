@@ -66,6 +66,9 @@ enum EDatePrecision
 
 shared_str GetGameDateAsString(EDatePrecision datePrec, char dateSeparator = ',', bool numericMonth = false);
 shared_str GetGameTimeAsString(ETimePrecision timePrec, char timeSeparator = ':', bool full_mode = true);
+// Game time for UI clocks: "21:00", or "Fri 21:00" when g_show_week_day is on.
+shared_str GetGameClockAsString();
+shared_str GetWeekDayAsString(ALife::_TIME_ID time);
 shared_str GetDateAsString(ALife::_TIME_ID time, EDatePrecision datePrec, char dateSeparator = ',', bool numericMonth = false);
 shared_str GetTimeAsString(ALife::_TIME_ID time, ETimePrecision timePrec, char timeSeparator = ':', bool full_mode = true);
 shared_str GetTimeAndDateAsString(ALife::_TIME_ID time);
