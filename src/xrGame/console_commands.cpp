@@ -1307,7 +1307,9 @@ struct CCC_ToggleNoClip : public IConsole_Command
         Actor()->g_Physics(accel, 0.0f, 0.0f);
     }
 };
+#endif // MASTER_GOLD
 
+// Available in all builds, including ReleaseMasterGold, so mods can be tested in it.
 #include "xrAICore/Navigation/game_graph.h"
 struct CCC_JumpToLevel : public IConsole_Command
 {
@@ -1447,8 +1449,6 @@ public:
         IConsole_Command::fill_tips(tips, mode);
     }
 };
-
-#endif // MASTER_GOLD
 
 class CCC_LuaGCMethod : public CCC_Token
 {
@@ -2339,16 +2339,17 @@ void CCC_RegisterCommands()
     CMD4(CCC_FloatBlock, "ph_tri_query_ex_aabb_rate", &ph_console::ph_tri_query_ex_aabb_rate, 1.01f, 3.f);
 #endif // DEBUG
 
-#ifndef MASTER_GOLD
+    // Cheats and script commands, available in all builds
     CMD1(CCC_JumpToLevel, "jump_to_level");
     CMD3(CCC_Mask, "g_god", &psActorFlags, AF_GODMODE);
-    CMD1(CCC_ToggleNoClip, "g_no_clip");
     CMD3(CCC_Mask, "g_unlimitedammo", &psActorFlags, AF_UNLIMITEDAMMO);
     CMD1(CCC_Spawn, "g_spawn");
     CMD1(CCC_SpawnToInventory, "g_spawn_to_inventory");
     CMD1(CCC_Script, "run_script");
     CMD1(CCC_ScriptCommand, "run_string");
     CMD1(CCC_TimeFactor, "time_factor");
+#ifndef MASTER_GOLD
+    CMD1(CCC_ToggleNoClip, "g_no_clip"); // actor input for no-clip is compiled out in MASTER_GOLD
 #endif // MASTER_GOLD
 
     CMD3(CCC_Mask, "g_autopickup", &psActorFlags, AF_AUTOPICKUP);
